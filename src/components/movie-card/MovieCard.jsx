@@ -8,6 +8,8 @@ import Button from '../button/Button';
 import { category } from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
 
+import { FiPlay } from "react-icons/fi";
+
 const MovieCard = props => {
 
     const item = props.item;
@@ -18,7 +20,7 @@ const MovieCard = props => {
         <Link to={link}>
             <div className="movie-card" style={{backgroundImage: `url(${bg})`}}>
                 <Button>
-                    <i className="bax bax-play">Watch</i>
+                    <i className="bax bax-play"><FiPlay/></i>
                 </Button>
             </div>
             <h3>{item.title || item.name}</h3>
